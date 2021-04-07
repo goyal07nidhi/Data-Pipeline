@@ -2,6 +2,8 @@
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
+#### Quick Links
+- [CLAAT document](https://codelabs-preview.appspot.com/?file_id=1wYxfi7JVXaJxT_ytsv2Wzg5AU2HHeEqHb57Yh-V9DJY#0)
 
 ## Table of Contents
 
