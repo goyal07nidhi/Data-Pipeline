@@ -1,0 +1,28 @@
+---- Number of Events per YearMonth
+select BEGIN_YEARMONTH, count(distinct(EVENT_ID)) as Num_of_Events
+from `assignment1-306220.sevirdataset.storm` 
+group by BEGIN_YEARMONTH;
+
+--- Number of Injuries and Death per YearMonth
+select BEGIN_YEARMONTH, sum(cast(DEATHS_DIRECT as numeric) + cast(DEATHS_INDIRECT as numeric)) as Deaths, 
+sum(cast(INJURIES_DIRECT as numeric) + cast(INJURIES_INDIRECT as numeric)) as Injuries
+from `assignment1-306220.sevirdataset.storm` 
+group by BEGIN_YEARMONTH;
+
+--- Most occurred event types
+select EVENT_TYPE, count(distinct EVENT_ID) as occurred
+from `assignment1-306220.sevirdataset.storm` 
+group by EVENT_TYPE
+order by count(distinct EVENT_ID) desc;
+
+--- Events per State
+select STATE, count(distinct(EVENT_ID)) as Num_of_Events
+from `assignment1-306220.sevirdataset.storm` 
+group by STATE;
+
+--- Longest occurred events
+select EVENT_ID, sum(END_DAY - BEGIN_DAY) as Duration
+from `assignment1-306220.sevirdataset.storm` 
+group by EVENT_ID
+order by sum(END_DAY - BEGIN_DAY) desc ;
+
